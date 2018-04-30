@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CustomSegmentedControl.h
 //  TaxiTest
 //
 //  Created by Yevgenii Pasko on 4/30/18.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CustomSegmentedControl : UIView
 
 @end
-

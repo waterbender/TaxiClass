@@ -6,13 +6,13 @@
 //  Copyright © 2018 Yevgenii Pasko. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TaxiOrderViewController.h"
 
-@interface ViewController ()
+@interface TaxiOrderViewController ()
 
 @end
 
-@implementation ViewController
+@implementation TaxiOrderViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
