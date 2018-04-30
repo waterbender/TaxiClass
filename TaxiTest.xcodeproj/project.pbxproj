@@ -8,24 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		EF712C1920971A1E00008BB6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C1820971A1E00008BB6 /* AppDelegate.m */; };
-		EF712C1C20971A1E00008BB6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C1B20971A1E00008BB6 /* ViewController.m */; };
+		EF712C1C20971A1E00008BB6 /* TaxiOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C1B20971A1E00008BB6 /* TaxiOrderViewController.m */; };
 		EF712C1F20971A1E00008BB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF712C1D20971A1E00008BB6 /* Main.storyboard */; };
 		EF712C2120971A2100008BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF712C2020971A2100008BB6 /* Assets.xcassets */; };
 		EF712C2420971A2100008BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF712C2220971A2100008BB6 /* LaunchScreen.storyboard */; };
 		EF712C2720971A2100008BB6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C2620971A2100008BB6 /* main.m */; };
+		EF712C332097201800008BB6 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C322097201800008BB6 /* CustomSegmentedControl.m */; };
+		EF712C362097453F00008BB6 /* CustomnViewButtonForSegmentControll.m in Sources */ = {isa = PBXBuildFile; fileRef = EF712C352097453F00008BB6 /* CustomnViewButtonForSegmentControll.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		EF712C1420971A1E00008BB6 /* TaxiTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxiTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF712C1720971A1E00008BB6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EF712C1820971A1E00008BB6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		EF712C1A20971A1E00008BB6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EF712C1B20971A1E00008BB6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF712C1A20971A1E00008BB6 /* TaxiOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TaxiOrderViewController.h; sourceTree = "<group>"; };
+		EF712C1B20971A1E00008BB6 /* TaxiOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TaxiOrderViewController.m; sourceTree = "<group>"; };
 		EF712C1E20971A1E00008BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EF712C2020971A2100008BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EF712C2320971A2100008BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF712C2520971A2100008BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF712C2620971A2100008BB6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF712C312097201800008BB6 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
+		EF712C322097201800008BB6 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
+		EF712C342097453F00008BB6 /* CustomnViewButtonForSegmentControll.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomnViewButtonForSegmentControll.h; sourceTree = "<group>"; };
+		EF712C352097453F00008BB6 /* CustomnViewButtonForSegmentControll.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomnViewButtonForSegmentControll.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +66,9 @@
 			children = (
 				EF712C1720971A1E00008BB6 /* AppDelegate.h */,
 				EF712C1820971A1E00008BB6 /* AppDelegate.m */,
-				EF712C1A20971A1E00008BB6 /* ViewController.h */,
-				EF712C1B20971A1E00008BB6 /* ViewController.m */,
+				EF712C2E20971A3600008BB6 /* ViewModels */,
+				EF712C2D20971A2E00008BB6 /* Views */,
+				EF712C2F20971A5100008BB6 /* Model */,
 				EF712C1D20971A1E00008BB6 /* Main.storyboard */,
 				EF712C2020971A2100008BB6 /* Assets.xcassets */,
 				EF712C2220971A2100008BB6 /* LaunchScreen.storyboard */,
@@ -69,6 +76,41 @@
 				EF712C2620971A2100008BB6 /* main.m */,
 			);
 			path = TaxiTest;
+			sourceTree = "<group>";
+		};
+		EF712C2D20971A2E00008BB6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF712C3020971FD500008BB6 /* TaxiOrder */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF712C2E20971A3600008BB6 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		EF712C2F20971A5100008BB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF712C3020971FD500008BB6 /* TaxiOrder */ = {
+			isa = PBXGroup;
+			children = (
+				EF712C1A20971A1E00008BB6 /* TaxiOrderViewController.h */,
+				EF712C1B20971A1E00008BB6 /* TaxiOrderViewController.m */,
+				EF712C312097201800008BB6 /* CustomSegmentedControl.h */,
+				EF712C322097201800008BB6 /* CustomSegmentedControl.m */,
+				EF712C342097453F00008BB6 /* CustomnViewButtonForSegmentControll.h */,
+				EF712C352097453F00008BB6 /* CustomnViewButtonForSegmentControll.m */,
+			);
+			path = TaxiOrder;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,9 +183,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF712C1C20971A1E00008BB6 /* ViewController.m in Sources */,
+				EF712C1C20971A1E00008BB6 /* TaxiOrderViewController.m in Sources */,
 				EF712C2720971A2100008BB6 /* main.m in Sources */,
 				EF712C1920971A1E00008BB6 /* AppDelegate.m in Sources */,
+				EF712C362097453F00008BB6 /* CustomnViewButtonForSegmentControll.m in Sources */,
+				EF712C332097201800008BB6 /* CustomSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

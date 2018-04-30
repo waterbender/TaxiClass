@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+IBInspectable
+IB_DESIGNABLE
 
-@interface CustomSegmentedControl : UIView
+
+
+@interface CustomSegmentedControl : UIControl <NSCoding>
+
+@property (assign, nonatomic) IBInspectable CGFloat borderWidth;
+@property (strong, nonatomic) IBInspectable UIColor *borderColor;
+@property (strong, nonatomic) IBInspectable UIColor *textColor;
+@property (strong, nonatomic) IBInspectable UIColor *selectorColor;
+@property (strong, nonatomic) IBInspectable UIColor *selectorTextColor;
+@property (assign, nonatomic) IBInspectable CGFloat selectorHeight;
+
+
+@property (strong, nonatomic) IBInspectable NSString *commaSeparatedButtonTitles;
+@property (assign, nonatomic) int selectedSegmentIndex;
 
 @end
