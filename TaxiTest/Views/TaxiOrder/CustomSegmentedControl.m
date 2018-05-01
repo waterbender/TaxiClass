@@ -116,7 +116,7 @@ CGFloat stackSpacing = 10;
     label.textColor = self.selectorTextColor;
     
     if (self.buttonsArray.count == self.selectedImagesArray.count) {
-        UIImageView *imageView = [self.buttonsArray.firstObject viewWithTag:46];
+        UIImageView *imageView = [self.buttonsArray[self.selectedIndex] viewWithTag:46];
         imageView.image = self.selectedImagesArray[self.selectedIndex];
     }
     
