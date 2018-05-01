@@ -201,23 +201,11 @@ CGFloat stackSpacing = 10;
         labelTitle.textAlignment = NSTextAlignmentCenter;
         labelTitle.userInteractionEnabled = false;
         labelTitle.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
-        //labelTitle.translatesAutoresizingMaskIntoConstraints = false;
         
         
         [button addSubview:labelTitle];
         [self.buttonsArray addObject:button];
     }
-    
-//    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
-//                                                       attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual
-//                                                          toItem:nil attribute:NSLayoutAttributeNotAnAttribute
-//                                                      multiplier:1.0
-//                                                        constant:self.needdedWidth]];
-//    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
-//                                                                              attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual
-//                                                                                 toItem:nil attribute:NSLayoutAttributeNotAnAttribute
-//                                                                             multiplier:1.0
-//                                                                               constant:self.bounds.size.height]];
 }
 
 -(void) setImages {
