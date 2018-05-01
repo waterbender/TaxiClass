@@ -91,8 +91,11 @@ CGFloat stackSpacing = 10;
 }
 
 -(CGFloat) needdedWidth {
-    CGFloat widthCurrent = self.bounds.size.width/self.buttonsArray.count;
-    if ((self.bounds.size.width/(CGFloat)self.buttonsArray.count)>width) {
+    
+    CGRect windowRect = self.window.frame;
+    CGFloat windowWidth = windowRect.size.width;
+    CGFloat widthCurrent = windowWidth/self.buttonsArray.count;
+    if (widthCurrent>width) {
         return widthCurrent;
     } else {
         return width;
@@ -101,6 +104,7 @@ CGFloat stackSpacing = 10;
 
 -(void)updateView {
     
+    [self layoutSubviews];
     [self.buttonsArray removeAllObjects];
     self.buttonsArray = [[NSMutableArray alloc] init];
     [self.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
@@ -111,10 +115,10 @@ CGFloat stackSpacing = 10;
     UILabel *label = [self.buttonsArray.firstObject viewWithTag:45];
     label.textColor = self.selectorTextColor;
     
-//    if (self.buttonsArray.count == self.selectedImagesArray.count) {
-//        UIImageView *imageView = [self.buttonsArray.firstObject viewWithTag:46];
-//        imageView.image = self.selectedImagesArray[self.selectedIndex];
-//    }
+    if (self.buttonsArray.count == self.selectedImagesArray.count) {
+        UIImageView *imageView = [self.buttonsArray.firstObject viewWithTag:46];
+        imageView.image = self.selectedImagesArray[self.selectedIndex];
+    }
     
     
     CGFloat backLineWidth = self.frame.size.width;
@@ -135,7 +139,7 @@ CGFloat stackSpacing = 10;
     [scrollView.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = true;
     
     CGFloat selectorWidth = self.needdedWidth;
-    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake((self.selectedIndex*self.needdedWidth+(self.selectedIndex-1)*stackSpacing), self.bounds.size.height-self.selectorHeight, selectorWidth, self.selectorHeight)];
+    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake((self.selectedIndex*self.needdedWidth)+(self.selectedIndex-1)*stackSpacing, self.bounds.size.height-self.selectorHeight, selectorWidth, self.selectorHeight)];
     self.selectedView.backgroundColor = self.selectorColor;
     [scrollView addSubview:self.selectedView];
     
@@ -147,11 +151,13 @@ CGFloat stackSpacing = 10;
     stackView.translatesAutoresizingMaskIntoConstraints = false;
     [scrollView addSubview:stackView];
     
+    
+    CGFloat widthFull = (self.buttonsArray.count*self.needdedWidth)+(self.buttonsArray.count-1)*stackSpacing;
     [scrollView addConstraint:[NSLayoutConstraint constraintWithItem:stackView
-                                                                  attribute:NSLayoutAttributeLeft
+                                                                  attribute:NSLayoutAttributeLeading
                                                                   relatedBy:NSLayoutRelationEqual
                                                                      toItem:scrollView
-                                                                  attribute:NSLayoutAttributeLeft
+                                                                  attribute:NSLayoutAttributeLeading
                                                                  multiplier:1.0
                                                                    constant:0]];
     [scrollView addConstraint:[NSLayoutConstraint constraintWithItem:stackView
@@ -159,8 +165,14 @@ CGFloat stackSpacing = 10;
                                                               toItem:scrollView attribute:NSLayoutAttributeTop
                                                           multiplier:1.0
                                                             constant:0]];
+    [stackView addConstraint:[NSLayoutConstraint constraintWithItem:stackView
+                                                           attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual
+                                                              toItem:nil attribute:NSLayoutAttributeNotAnAttribute
+                                                          multiplier:1.0
+                                                            constant:widthFull]];
     
     [stackView reloadInputViews];
+    [stackView layoutSubviews];
 }
 
 -(void) setButtons {
@@ -196,16 +208,16 @@ CGFloat stackSpacing = 10;
         [self.buttonsArray addObject:button];
     }
     
-    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
-                                                       attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                          toItem:nil attribute:NSLayoutAttributeNotAnAttribute
-                                                      multiplier:1.0
-                                                        constant:self.needdedWidth]];
-    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
-                                                                              attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual
-                                                                                 toItem:nil attribute:NSLayoutAttributeNotAnAttribute
-                                                                             multiplier:1.0
-                                                                               constant:self.bounds.size.height]];
+//    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
+//                                                       attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationGreaterThanOrEqual
+//                                                          toItem:nil attribute:NSLayoutAttributeNotAnAttribute
+//                                                      multiplier:1.0
+//                                                        constant:self.needdedWidth]];
+//    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
+//                                                                              attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual
+//                                                                                 toItem:nil attribute:NSLayoutAttributeNotAnAttribute
+//                                                                             multiplier:1.0
+//                                                                               constant:self.bounds.size.height]];
 }
 
 -(void) setImages {
