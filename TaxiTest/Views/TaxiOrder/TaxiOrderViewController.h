@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomSegmentedControl.h"
 
 @interface TaxiOrderViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet CustomSegmentedControl *taxiSegmentControll;
+
 
 
 @end

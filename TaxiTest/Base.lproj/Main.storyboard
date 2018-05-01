@@ -14,7 +14,8 @@
         <scene sceneID="gZG-kc-X4i">
             <objects>
                 <navigationController id="Gnq-8y-1rQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gLW-sr-TKV">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="gLW-sr-TKV">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -35,44 +36,49 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k3L-Yf-qoL" customClass="CustomSegmentedControl">
-                                <rect key="frame" x="0.0" y="60" width="375" height="70"/>
+                                <rect key="frame" x="0.0" y="12" width="375" height="73"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="textColor">
-                                        <color key="value" red="0.55025392770767212" green="0.98723286390304565" blue="0.52356648445129395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.99607843137254903" green="0.81568627450980391" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonTitles" value="Hello"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedButtonTitles" value="Стандарт,Комфорт,Бизнес,Универсал,Автобус"/>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99832028149999996" green="0.14929258549999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedLineHeight">
-                                        <real key="value" value="4"/>
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectorColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="value" red="0.99607843137254903" green="0.81568627450980391" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="selectorTextColor">
-                                        <color key="value" red="1" green="0.063548900462962965" blue="0.47575472608024694" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.28627450980392155" green="0.75294117647058822" blue="0.92156862745098034" alpha="1" colorSpace="deviceRGB"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                        <real key="value" value="0.0"/>
+                                        <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="selectorHeight">
-                                        <real key="value" value="4"/>
+                                        <real key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundLineColor">
+                                        <color key="value" red="0.28627450980000002" green="0.75294117650000003" blue="0.92156862750000001" alpha="1" colorSpace="deviceRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedSegmentImagesNames" value="ic_car_standart,ic_car_comfort,ic_car_business,ic_car_universal,ic_car_bus"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedEnableSegmentImagesNames" value="ic_car_standart_select,ic_car_comfort_select,ic_car_business_select,ic_car_universal_select,ic_car_bus_select"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.27058823529411763" green="0.27843137254901962" blue="0.32941176470588235" alpha="1" colorSpace="deviceRGB"/>
                         <viewLayoutGuide key="safeArea" id="gCA-6S-gav"/>
                     </view>
                     <navigationItem key="navigationItem" id="QCm-4t-oCA"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="taxiSegmentControll" destination="k3L-Yf-qoL" id="mHn-0q-m3E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IWD-UD-LtL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="212" y="134"/>
+            <point key="canvasLocation" x="212" y="133.74384236453201"/>
         </scene>
     </scenes>
 </document>

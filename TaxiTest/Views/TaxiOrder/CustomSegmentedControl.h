@@ -17,12 +17,18 @@ IB_DESIGNABLE
 @property (assign, nonatomic) IBInspectable CGFloat borderWidth;
 @property (strong, nonatomic) IBInspectable UIColor *borderColor;
 @property (strong, nonatomic) IBInspectable UIColor *textColor;
+
+@property (strong, nonatomic) IBInspectable UIColor *backgroundLineColor;
+
 @property (strong, nonatomic) IBInspectable UIColor *selectorColor;
 @property (strong, nonatomic) IBInspectable UIColor *selectorTextColor;
 @property (assign, nonatomic) IBInspectable CGFloat selectorHeight;
 
-
+@property (strong,nonatomic) IBInspectable NSString *commaSeparatedSegmentImagesNames;
+@property (strong,nonatomic) IBInspectable NSString *commaSeparatedEnableSegmentImagesNames;
 @property (strong, nonatomic) IBInspectable NSString *commaSeparatedButtonTitles;
-@property (assign, nonatomic) int selectedSegmentIndex;
+
+//@property (assign, nonatomic) int selectedSegmentIndex;
+-(void)updateView;
 
 @end
