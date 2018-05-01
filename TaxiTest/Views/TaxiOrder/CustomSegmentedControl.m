@@ -11,8 +11,6 @@
 @interface CustomSegmentedControl()
 
 @property (strong, nonatomic) NSMutableArray *buttonsArray;
-@property (strong, nonatomic) NSMutableArray *imagesArray;
-@property (strong, nonatomic) NSMutableArray *selectedImagesArray;
 @property (strong, nonatomic) UIView *selectedView;
 
 @end
@@ -113,6 +111,12 @@ CGFloat stackSpacing = 10;
     UILabel *label = [self.buttonsArray.firstObject viewWithTag:45];
     label.textColor = self.selectorTextColor;
     
+//    if (self.buttonsArray.count == self.selectedImagesArray.count) {
+//        UIImageView *imageView = [self.buttonsArray.firstObject viewWithTag:46];
+//        imageView.image = self.selectedImagesArray[self.selectedIndex];
+//    }
+    
+    
     CGFloat backLineWidth = self.frame.size.width;
     UIView *bottomLineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-self.selectorHeight, backLineWidth, self.selectorHeight)];
     bottomLineView.backgroundColor = self.backgroundLineColor;
@@ -131,7 +135,7 @@ CGFloat stackSpacing = 10;
     [scrollView.rightAnchor constraintEqualToAnchor:self.rightAnchor].active = true;
     
     CGFloat selectorWidth = self.needdedWidth;
-    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake(0, self.bounds.size.height-self.selectorHeight, selectorWidth, self.selectorHeight)];
+    self.selectedView = [[UIView alloc] initWithFrame:CGRectMake((self.selectedIndex*self.needdedWidth+(self.selectedIndex-1)*stackSpacing), self.bounds.size.height-self.selectorHeight, selectorWidth, self.selectorHeight)];
     self.selectedView.backgroundColor = self.selectorColor;
     [scrollView addSubview:self.selectedView];
     
@@ -142,7 +146,6 @@ CGFloat stackSpacing = 10;
     stackView.spacing = stackSpacing;
     stackView.translatesAutoresizingMaskIntoConstraints = false;
     [scrollView addSubview:stackView];
-    
     
     [scrollView addConstraint:[NSLayoutConstraint constraintWithItem:stackView
                                                                   attribute:NSLayoutAttributeLeft
@@ -198,6 +201,11 @@ CGFloat stackSpacing = 10;
                                                           toItem:nil attribute:NSLayoutAttributeNotAnAttribute
                                                       multiplier:1.0
                                                         constant:self.needdedWidth]];
+    [self.buttonsArray.firstObject addConstraint:[NSLayoutConstraint constraintWithItem:self.buttonsArray.firstObject
+                                                                              attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationGreaterThanOrEqual
+                                                                                 toItem:nil attribute:NSLayoutAttributeNotAnAttribute
+                                                                             multiplier:1.0
+                                                                               constant:self.bounds.size.height]];
 }
 
 -(void) setImages {
@@ -238,7 +246,7 @@ CGFloat stackSpacing = 10;
         
         if ([btn isEqual:button]) {
             
-            //self.selectedSegmentIndex = i;
+            self.selectedIndex = i;
             CGFloat selectedPosition = (self.needdedWidth+stackSpacing)*i;
             CGRect rectSelected = self.selectedView.frame;
             CGPoint originSelected = self.selectedView.frame.origin;

@@ -65,6 +65,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedSegmentImagesNames" value="ic_car_standart,ic_car_comfort,ic_car_business,ic_car_universal,ic_car_bus"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="commaSeparatedEnableSegmentImagesNames" value="ic_car_standart_select,ic_car_comfort_select,ic_car_business_select,ic_car_universal_select,ic_car_bus_select"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="choosedItem:" destination="vDs-UW-G20" eventType="valueChanged" id="6ad-wc-RKL"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.27058823529411763" green="0.27843137254901962" blue="0.32941176470588235" alpha="1" colorSpace="deviceRGB"/>

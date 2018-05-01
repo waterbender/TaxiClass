@@ -28,6 +28,9 @@ IB_DESIGNABLE
 @property (strong,nonatomic) IBInspectable NSString *commaSeparatedEnableSegmentImagesNames;
 @property (strong, nonatomic) IBInspectable NSString *commaSeparatedButtonTitles;
 
+@property (strong, nonatomic) NSMutableArray *imagesArray;
+@property (strong, nonatomic) NSMutableArray *selectedImagesArray;
+@property (assign, nonatomic) int selectedIndex;
 //@property (assign, nonatomic) int selectedSegmentIndex;
 -(void)updateView;
 
